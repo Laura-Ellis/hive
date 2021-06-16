@@ -1,0 +1,60 @@
+Start HBase instance:
+1.	Connect to HBase
+$ /home/user/Hadoop/bin/hbase-shell
+2.	Create namespace
+a.	Hbase(main):001:0> create_namespace ‘books’
+Create HBase groupings of tables
+3.	Create a table
+hbase(main):001:0> create ‘books:series’, ‘cf’
+4.	Information about your table
+hbase(main):001:0> list ‘books’
+hbase(main:001:0> describe ‘books’
+Load data
+5.	Put data into your table (manually)
+hbase(main):001:0> put ‘books’, ‘1’, ‘series:series’, ‘Yes’
+hbase(main):001:0> put ‘books’, ‘1’, ‘series:title’, ‘Charlotte Holmes Series’
+hbase(main):001:0> put ‘books’, ‘1’, ‘series:number’, ‘1’
+6.	Save data
+hTable.put(p);
+7.	Close table
+hTable.close()  
+Complete ‘put’ syntax for records 1 and 2
+FORMAT: put <'tablename'>,<'rowname'>,<'columnvalue'>,<'value'>
+put 'books','Record1','book:title','A study in Charlotte'
+put 'books','Record1','topic:topic','Fiction'
+put 'books','Record1','topic:sub-topic','Young-adult'
+put 'books','Record1','topic:sub-topic','Mystery'
+put 'books','Record1','topic:sub-topic','Adventure'
+put 'books','Record1','series:series','Yes'
+put 'books','Record1','series:seriestitle','Charlotte Holmes Series'
+put 'books','Record1','series:series number','1'
+put 'books','Record1','author:author','Brittany Cavallaro'
+put 'books','Record1','publisher:publisher','Katherine Tegan Books'
+put 'books','Record1','format:paperback','352 pages'
+put 'books','Record1','format:dimensions','5.3 x 0.8 x 8 inches'
+put 'books','Record1','isbn:ISBN-10','0087738911'
+put 'books','Record1','isbn:ISBN-13','942-006711918'
+put 'books','Record 2','book:title','How to be a comedian'
+put 'books','Record 2','topic:topic','Non-Fiction'
+put 'books','Record 2','topic:sub-topic','Adult'
+put 'books','Record 2','topic:sub-topic','Yount-adult'
+put 'books','Record 2','topic:sub-topic','Self Help'
+put 'books','Record 2','topic:sub-topic','Professional Training'
+put 'books','Record 2','topic:sub-topic','Comedy'
+put 'books','Record 2','series:se','Non-Fiction'
+put 'books','Record 2','author:author','George Carlin'
+put 'books','Record 2','author:author','David Letterman'
+put 'books','Record 2','author:author','Jay Leno'
+put 'books','Record 2','author:author','Conan O'Brian'
+put 'books','Record 2','author:author','Jimmy Kimmel'
+put 'books','Record 2','author:author','George Lopez'
+put 'books','Record 2','author:author','Eddie Murphy'
+put 'books','Record 2','author:author','Ellen Degeneres'
+put 'books','Record 2','author:author','Richard Pryor'
+put 'books','Record 2','author:author','Margaret Cho'
+put 'books','Record 2','author:affiliation','12 Second Street  NY 10005'
+put 'books','Record 2','author:affiliation','91  Hollywood Street Los Angeles CA 90100'
+put 'books','Record 2','publisher:pub','McGraw Hill Academic Press'
+put 'books','Record 2','format:paperback','666 pages'
+put 'books','Record 2','isbn:10','0087738911'
+put 'books','Record 2','isbn:13','942-006711918'
